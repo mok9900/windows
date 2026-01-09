@@ -16,9 +16,9 @@ primary_region = 'nrt'
   windows = ''
 
 [[vm]]
-  memory = '8192'
-  cpu_kind = 'performance'
-  cpus = 4
+  memory = '2048'
+  cpu_kind = 'shard'
+  cpus = 1
 
 [[services]]
   protocol = 'tcp'
@@ -33,6 +33,6 @@ primary_region = 'nrt'
 [env]
   VERSION = '11'
   LANGUAGE = 'korean'
-  RAM_SIZE = '8G'
+  RAM_SIZE = '2G'
   CPU_CORES = '4'
   DISK_SIZE = '64G'
