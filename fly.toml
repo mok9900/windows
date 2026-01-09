@@ -33,6 +33,6 @@ primary_region = 'nrt'
 [env]
   VERSION = '11'
   LANGUAGE = 'korean'
-  RAM_SIZE = '4G'
-  CPU_CORES = '2'
+  RAM_SIZE = '8G'
+  CPU_CORES = '4'
   DISK_SIZE = '64G'
