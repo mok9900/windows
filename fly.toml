@@ -8,7 +8,7 @@ primary_region = "nrt"
   VERSION = "11"
   RAM_SIZE = "4G"
   CPU_CORES = "2"
-  DISK_SIZE = "64G"
+  DISK_SIZE = "128G"
 
 [[mounts]]
   source = "windows_storage"
