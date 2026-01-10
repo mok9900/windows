@@ -4,7 +4,7 @@
 #
 
 app = 'korean-laptop-lounge-bot'
-primary_region = 'iad'
+primary_region = 'nrt'
 
 [build]
 
@@ -21,7 +21,7 @@ primary_region = 'iad'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
-  memory_mb = 1024
+  memory = '8gb'
+  cpu_kind = 'performance'
+  cpus = 4
+  memory_mb = 8192
