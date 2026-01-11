@@ -1,0 +1,41 @@
+app = "windows-quiet-violet-2141"
+primary_region = "nrt"
+
+
+  [env]
+    VERSION = "11"
+      RAM_SIZE = "16G"
+        CPU_CORES = "8"
+
+          [[mounts]]
+            source = "windows"
+            destination = "/storage"
+
+              [[services]]
+                protocol = "tcp"
+                  internal_port = 8006
+                    auto_start_machines = false
+                      auto_stop_machines = false
+
+                        [[services.ports]]
+                            port = 80
+                                handlers = ["http"]
+
+                                  [[services.ports]]
+                                      port = 443
+                                          handlers = ["tls", "http"]
+
+                                          [[services]]
+                                            protocol = "tcp"
+                                              internal_port = 3389
+                                                auto_start_machines = false
+                                                  auto_stop_machines = false
+
+                                                    [[services.ports]]
+                                                        port = 3389
+
+                                                        [vm]
+                                                          cpu_kind = "performance"
+                                                            cpus = 16
+                                                              memory_mb = 32768
+                                                               vm.size = "a100-80gb"
