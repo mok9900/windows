@@ -5,7 +5,6 @@ services:
     environment:
       VERSION: "11"
     devices:
-      - /dev/kvm
       - /dev/net/tun
     cap_add:
       - NET_ADMIN
