@@ -6,7 +6,7 @@ primary_region = "nrt"
 VERSION = "11"
 RAM_SIZE = "131072"
 CPU_CORES = "16"
-
+STORAGE_SIZE = "500G"
 [[mounts]]
 source = "windows"
 destination = "/storage"
@@ -18,7 +18,7 @@ auto_start_machines = true
 auto_stop_machines = false
 
 [[services.ports]]
-port = 80
+port = 8006
 handlers = ["https"]
 
 [[services.ports]]
