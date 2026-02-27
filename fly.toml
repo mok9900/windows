@@ -1,41 +1,27 @@
-app = "windows-tcg"
-primary_region = "nrt"
+# fly.toml app configuration file generated for windows-bwqxwa on 2026-02-27T10:12:09Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
+app = 'windows-bwqxwa'
+primary_region = 'ams'
 
-[env]
-VERSION = "11"
-RAM_SIZE = "131072"
-CPU_CORES = "16"
-STORAGE_SIZE = "500G"
+[build]
 
 [[mounts]]
-source = "windows"
-destination = "/storage"
+  source = 'storage'
+  destination = '/storage'
 
-[[services]]
-protocol = "tcp"
-internal_port = 8006
-auto_start_machines = true
-auto_stop_machines = false
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
-[[services.ports]]
-port = 8006
-handlers = ["https"]
-
-[[services.ports]]
-port = 443
-handlers = ["tls", "https"]
-
-[[services]]
-protocol = 3389
-internal_port = 3389
-auto_start_machines = true
-auto_stop_machines = false
-
-[[services.ports]]
-port = 3389
-
-[vm]
-cpu_kind = "performance"
-cpus = "1"
-memory_mb = "2048"
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 2048
