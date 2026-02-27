@@ -38,4 +38,5 @@ port = 3389
 [vm]
 cpu_kind = "performance"
 cpus = "1"
+memory = "500gb"
 memory_mb = "2048"
